@@ -6,6 +6,13 @@ Developers frequently have to create interfaces that allow non-developers to eas
 
 Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
 
+## How To Run Code
+
+LOG into mySQL
+SOURCE Db files into your SQL
+RETURN to terminal and run node index.js
+SEARCH THE DATABASE FOR DESIRED INFORMATION!
+
 ## User Story
 
 ```md
@@ -86,8 +93,6 @@ As the image illustrates, your schema should contain the following three tables:
 
     * `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
 
-<!--  update employee  role  -->
-<!-- eliminate extra -->
 You might want to use a separate file that contains functions for performing specific SQL queries you'll need to use. A constructor function or class could be helpful for organizing these. You might also want to include a `seeds.sql` file to pre-populate your database, making the development of individual features much easier.
 
 ## Bonus
@@ -180,7 +185,7 @@ You are required to submit BOTH of the following for review:
 
 * A walkthrough video demonstrating the functionality of the application.
 
-* The URL of the GitHub repository, with a unique name and a README describing the project.
+* https://github.com/okingdomz/SQL-employee-Tracker
 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
