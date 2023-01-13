@@ -17,10 +17,7 @@ const startInquirer = () => {
                 'Add role',
                 'Add department',
                 'Add employee',
-                // 'View employees by manager',
-                // 'View employees by department',
                 'Update an employee role',
-                // 'Update an employee manager',
                 'Remove an employee',
                 'Remove a department',
                 'Remove a role',
@@ -56,21 +53,13 @@ const startInquirer = () => {
             addEmployee();
         };
 
-        // if (nextPrompt === "View employees by manager") {
-        //     viewByManager();
-        // };
-
-        // if (nextPrompt === "View employees by department") {
-        //     viewByDepartment();
-        // };
+        
 
         if (nextPrompt === "Update an employee roles") {
             updateEmployeeRole();
         };
 
-        // if (nextPrompt === "Update an employee manager") {
-        //     updateEmployeeManager();
-        // };
+        
 
         if (nextPrompt === "Remove an employee") {
             removeEmployee();
@@ -313,77 +302,7 @@ const addEmployee = () => {
             });
           });
         };
-// const viewByManager = () => {
-//     const sql = `SELECT first_name, last_name, id FROM employees`;
-//     db.query(sql, (err, rows) => {
-//         if (err) {
-//             throw err;
-//         }
-//         // const employees = rows.maps(({first_name, last_name, id}) =>({name: `${first_name} ${last_name}`, value: id}));
-//         // inquirer.prompt([
-//         //     {
-//         //         type: 'list',
-//         //         name: 'employee',
-//         //         message: 'which manager wiuld you like to see?',
-//         //         choices: employees
-//         //     }
-//         // ])
-//         // .then(employeeAnswer => {
-//         //     const manager = employeeAnswer.employee;
-//         //     const params = [manager];
-//         //     const sql = `SELECT id, first_name, last_name FROM employees
-//         //     WHERE manager_id = ?`
 
-//         //     db.query(sql, params, (err, rows) => {
-//         //         if (err) {
-//         //             throw err;
-//         //         }
-//         //         if (rows.length === 0) {
-//         //             console.log(' this is not a manager for anyone fam');
-//         //             return startInquirer();
-//         //         }
-//         //         console.log('\n');
-//         //         console.log(rows);
-//         //         return startInquirer();
-//         //     });
-//         // });
-//     });
-// };
-// const viewByDepartment = () => {
-//     const sql = `SELECT * FROM departments`;
-//     db.query(sql, (err, rows) => {
-//         if (err) {
-//             throw err;
-//         }
-        
-//         // const departments = rows.map(({name, id}) =>({name: name, value: id}));
-//         // inquirer.prompt([
-//         //     {
-//         //         type: 'list',
-//         //         name: 'employee',
-//         //         message: 'which manager would you like to see?',
-//         //         choices: departments
-//         //     }
-//         // ])
-//         // .then(employeeAnswer => {
-//         //     const department = employeeAnswer.employee;
-//         //     const params = [department];
-//         //     const sql = `SELECT employees.id, first_name, last_name, deparments.name AS department FROM employees
-//         //     LEFT JOIN roles ON employees.role_id = roles.id
-//         //     LEFT JOIN departments ON roles.department_id = departments.id
-//         //     WHERE departments.id = ?`;
-
-//         //     db.query(sql, params, (err, rows) => {
-//         //         if (err) {
-//         //             throw err;
-//         //         }
-//         //         console.log('\n');
-//         //         console.table(rows);
-//         //         return startInquirer();
-//         //     });
-//         // });
-//     });
-// };
 // update employee roles
 const updateEmployeeRole = () => {
     const sql = `SELECT first_name, last_name, id FROM employees`
@@ -435,57 +354,6 @@ const updateEmployeeRole = () => {
       });
     });
   };
-//    update employee manager
-// const updateEmployeeManager = () => {
-//     const sql = `SELECT first_name, last_name, id FROM employees`
-//   db.query(sql, (err, rows) => {
-//     if (err) {
-//       throw err;
-//     }
-//     const employees = rows.map(({first_name, last_name, id}) => ({name: `${first_name} ${last_name}`, value: id}));
-//     inquirer.prompt([
-//         {
-//             type: 'list',
-//             name: 'employee',
-//             message: 'which employee would you like to update for their role?',
-//             choices: employees
-//         }
-//     ])
-//     .then(employeeAnswer => {
-//         const employee = employeeAnswer.employee;
-//         const params = [employee];
-//         const sql = `SELECT title, id FROM roles`;
-//         db.query(sql, (err, rows) => {
-//           if (err) {
-//             throw err;
-//           }
-//           const roles = rows.map(({title, id}) => ({name: title, value: id}));
-//           inquirer.prompt([
-//             {
-//               type: "list",
-//               name: "role",
-//               message: "What is the new role of this employee?",
-//               choices: roles
-//             }
-//           ])
-//           .then(rolesAnswer => {
-//             const role = rolesAnswer.role;
-//             params.unshift(role);
-//             const sql = `UPDATE employees
-//                           SET role_id = ?
-//                           WHERE id = ?`
-//             db.query(sql, params, (err) => {
-//               if (err) {
-//                 throw err;
-//               }
-//               console.log("Employee updated successfully");
-//               return viewEmployees();
-//             });
-//           });
-//         });
-//       });
-//     });
-//   };
 
   const removeEmployee = () => {
     const sql = `SELECT first_name, last_name, id FROM employees`

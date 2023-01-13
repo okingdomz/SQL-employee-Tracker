@@ -6,22 +6,7 @@
 -- ('Law'),
 -- ('Finance');
 
--- INSERT INTO roles (title, salary, department_id)
--- VALUES
--- ('Lead Engineer', 100000, 1),
--- ('Sales Lead', 80000, 2),
--- ('Sales Rep', 40000, 2),
--- ('Accountant', 120000, 4),
--- ('Lawyer', 80000, 3),
--- ('Legal lead', 90000, 3);
 
--- INSERT INTO employees (first_name, last_name, role_id)
--- VALUES
-
--- ('Jon', 'Stark', 1),
--- ('Darth', 'Vader', 2),
--- ('Aragon', 'Johnson', 3),
--- ('Kill', 'Bill', 4);
 
 USE employee_db;
 
